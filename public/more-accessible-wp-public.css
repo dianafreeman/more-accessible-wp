@@ -1,4 +1,29 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+.accessibility-controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: inherit;
+}
+.logged-in .accessibility-controls {
+  top: 20px;
+}
+.accessibility-controls .access-control {
+  background: none;
+  color: dark-blue;
+  border-radius: 20px;
+  font-size: 20px;
+  z-index: 100;
+  border: 1px solid gray;
+  color: gray;
+}
+.accessibility-controls .access-control:hover, .accessibility-controls .access-control:active, .accessibility-controls .access-control:focus {
+  outline: none;
+  border: 1px solid white;
+  color: white;
+}
+
+.openDyslexic {
+  font-family: OpenDyslexic !important;
+}
+
+/*# sourceMappingURL=more-accessible-wp-public.css.map */

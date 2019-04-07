@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: { // Dictionary of files
-                    'public/more-accessible-wp.css': 'public/css/main.scss' // 'destination': 'source'
+                    'public/more-accessible-wp-public.css': 'public/css/*.scss' // 'destination': 'source'
                 }
             }
         },
@@ -27,9 +27,7 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'assets/js/main.min.js': ['assets/js/main.js'],
-                    'assets/js/homePage.min.js': ['assets/js/homePage.js'],
-                    'assets/js/page.min.js': ['assets/js/page.js'],
+                    'public/js/more-accessible-wp-public.min.js': ['assets/js/more-accessible-wp-public.js']
 
 
                 }
@@ -39,25 +37,24 @@ module.exports = function(grunt) {
             options: {
                 map: {
                     inline: false, // save all sourcemaps as separate files...
-                    annotation: 'assets/css/maps/' // ...to the specified directory
                 },
 
                 processors: [
                     require('pixrem')(), // add fallbacks for rem units
-                    require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
+                    require('autoprefixer')({ browsers: 'last 2 versions' }) // add vendor prefixes
                 ]
             },
             dist: {
-                src: 'assets/css/main.css'
+                src: 'public/more-accessible-wp-public.css'
             }
         },
         watch: {
             scss: {
-                files: ['assets/scss/*.scss'],
+                files: ['more-accessible-wp/public/css/*.scss'],
                 tasks: ['sass']
             },
             scripts: {
-                files: ['Gruntfile.js', 'assets/js/homePage.js', 'assets/js/page.js', 'assets/js/main.js'],
+                files: ['Gruntfile.js', 'more-accessible-wp/public/js/*.js'],
                 tasks: ['jshint', 'uglify']
 
             }

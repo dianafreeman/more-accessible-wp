@@ -12,9 +12,7 @@
  * @subpackage More_Accessible_Wp/public/partials
  */
 ?>
-
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
-
+<div class="fixed-top">
 <div id="accessibility-controls" class="navbar navbar-expand-md bg-dark">
             <a class="btn btn-round skip-link access-control"
                 href="#content"
@@ -27,3 +25,4 @@
                 title="Adjust Font For Dyslexia"><i class="fas fa-font"></i><span class="sr-only"> <?php esc_html_e( 'Adjust font for Dyslexia', 'diana-simple' ); ?></span>
      </a>
 </div>
+

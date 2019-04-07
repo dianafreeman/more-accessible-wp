@@ -82,8 +82,16 @@ function run_more_accessible_wp() {
 run_more_accessible_wp();
 
 //  assumes that the navigation menu has a fixed top
-function hook_accessibility_header ( ) {
-	$str = include plugin_dir_path(__FILE__).'public/partials/more-accessible-wp-public-display.php';
-    return '<div class="fixed-top">'.$str; // this div should end _after_ the nav menu
+function hook_accessibility_nav ( ) {
+	include plugin_dir_path(__FILE__).'public/partials/more-accessible-wp-public-display.php';
 };
-add_action('wp_head','hook_accessibility_header',10,1);
+add_action('wp_head','hook_accessibility_nav',10,1);
+
+
+add_filter('wp_nav_menu_items', 'end_acessibility_nav', 10, 2);
+function end_acessibility_nav($items, $args){
+    if( $args->theme_location !== 'footer_menu' ){
+        $items .= '</div> <!-- end fixed-top header-->';
+    }
+    return $items;
+}

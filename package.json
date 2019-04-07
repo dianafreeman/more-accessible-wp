@@ -1,19 +1,33 @@
 {
-  "name": "more-accessible-wp",
-  "version": "1.0.0",
-  "description": "Accessibility User Controls for WordPress",
-  "main": "Gruntfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dianafreeman/more-accessible-wp.git"
-  },
-  "author": "Diana M Steakley-Freeman",
-  "license": "GFDL-1.1-or-later",
-  "bugs": {
-    "url": "https://github.com/dianafreeman/more-accessible-wp/issues"
-  },
-  "homepage": "https://github.com/dianafreeman/more-accessible-wp#readme"
+    "name": "more-accessible-wp",
+    "version": "1.0.0",
+    "description": "Accessibility User Controls for WordPress",
+    "main": "Gruntfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dianafreeman/more-accessible-wp.git"
+    },
+    "author": "Diana M Steakley-Freeman",
+    "license": "GFDL-1.1-or-later",
+    "bugs": {
+        "url": "https://github.com/dianafreeman/more-accessible-wp/issues"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.5.0",
+        "cssnano": "^4.1.10",
+        "grunt": "^1.0.4",
+        "grunt-contrib-jshint": "^2.0.0",
+        "grunt-contrib-sass": "^1.0.0",
+        "grunt-contrib-uglify": "^4.0.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-cssnano": "^2.1.0",
+        "grunt-postcss": "^0.9.0",
+        "pixrem": "^5.0.0"
+    }
 }
