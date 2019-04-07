@@ -1,0 +1,19 @@
+{
+  "name": "more-accessible-wp",
+  "version": "1.0.0",
+  "description": "Accessibility User Controls for WordPress",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianafreeman/more-accessible-wp.git"
+  },
+  "author": "Diana M Steakley-Freeman",
+  "license": "GFDL-1.1-or-later",
+  "bugs": {
+    "url": "https://github.com/dianafreeman/more-accessible-wp/issues"
+  },
+  "homepage": "https://github.com/dianafreeman/more-accessible-wp#readme"
+}
